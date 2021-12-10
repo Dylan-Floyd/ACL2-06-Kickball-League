@@ -1,5 +1,4 @@
-export default function PlayerList(props) {
-  const { players } = props
+export default function PlayerList({ players }) {
   return (
     <div>
       <h3>Players</h3>
