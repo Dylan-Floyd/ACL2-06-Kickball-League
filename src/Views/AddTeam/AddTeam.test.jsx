@@ -66,8 +66,7 @@ it('should add a team and redirect to the team detail page', async () => {
   userEvent.type(stateField, 'US');
   userEvent.click(submitBtn);
   
-  const loading = await screen.findByText(/l o a d i n g/i);
-  await waitForElementToBeRemoved(loading)
+  await waitForElementToBeRemoved(() => screen.getByText(/l o a d i n g/i))
 
   await screen.findByText('redirect me!');
 });
