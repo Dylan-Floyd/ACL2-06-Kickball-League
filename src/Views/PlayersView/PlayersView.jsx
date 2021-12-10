@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import PlayerList from '../../Components/PlayerList/PlayerList.jsx'
 import { getPlayers } from '../../services/players.js'
 
@@ -17,6 +18,7 @@ export default function PlayerView() {
 
   return (
     <div>
+      <Link to='/players/new'>Add a Player</Link>
       <PlayerList players={players}/>
     </div>
   )
