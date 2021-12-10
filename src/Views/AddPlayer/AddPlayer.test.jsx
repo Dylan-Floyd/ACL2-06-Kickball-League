@@ -61,8 +61,7 @@ it('should add a player and redirect to the player detail page', async () => {
   userEvent.type(positionField, 'Anytown');
   userEvent.click(submitBtn);
   
-  const loading = await screen.findByText(/l o a d i n g/i);
-  await waitForElementToBeRemoved(loading)
+  await waitForElementToBeRemoved(() => screen.getByText(/l o a d i n g/i));
 
   await screen.findByText('redirect me!');
 });
